@@ -1,4 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+	background: #f3f0f1;
+}
 .card {
 	display: inline-flex;
 	justify-content: space-between;
@@ -10,32 +12,62 @@
 .container {
 	max-width: 1200px;
 	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
 .btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: black;
 	margin: 20px 20px;
-	background-color: lightgreen;
 	width: 100px;
 	border-radius: 10px;
 	height: 30px;
+	border: 2px solid black;
+	font-weight: bold;
+	transition: all 0.4s ease;
+	text-decoration: none;
+}
+.btn:hover {
+	color: white;
+	background-color: black;
 }
 .inner {
 	border: 1px solid;
 	width: 300px;
-	height: 300px;
+	height: 350px;
 	position: relative;
 }
 .inner p {
 	height: 180px;
-	overflow: hidden;
+	overflow: auto;
+	padding: 0 10px;
 }
 .inner a {
 	position: absolute;
-	bottom: 10%;
-	right: 50%;
-	width: 90px;
+	bottom: 5%;
+	right: 16%;
+	width: 200px;
 	height: 30px;
 	font-size: 21px;
-	vertical-align: bottom;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	transition: color ease 0.3s;
+}
+.inner a:hover {
+	color: gray;
+}
+.inner h2 {
+	text-align: center;
+	height: auto;
+	width: 300px;
+	height: 30px;
+	padding: 10px 0 10px 0;
+	overflow-x: auto;
 }
 .add {
 	margin-top: 50px;
@@ -49,13 +81,14 @@
 .mmodal {
 	z-index: 1000;
 	position: fixed;
-	top: 30px;
+	top: 10%;
 	bottom: 0;
-	left: 300px;
+	left: 35%;
 	width: 500px;
+	height: 800px;
 }
 .mmodal-body {
-	background: #fff;
+	background: #f3f0f1;
 	margin: 40px;
 	padding: 20px;
 }
@@ -68,4 +101,50 @@
 	left: 0;
 	background-color: gray;
 	opacity: 0.5;
+}
+.add_btn {
+	display: block;
+	position: absolute;
+	top: 3%;
+	left: 67%;
+	z-index: 100;
+	border-radius: 50%;
+	font-size: 40px;
+	width: 53px;
+	border: 3px solid black;
+	transition: all 0.3s ease;
+}
+.add_btn:hover {
+	background-color: black;
+	color: white;
+}
+input[type="text"] {
+	border: 0;
+	box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+	font-weight: bold;
+	width: 300px;
+	height: 40px;
+}
+.center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.btn_back {
+	position: absolute;
+	top: 2.4%;
+	left: 40%;
+}
+.btn_red {
+	position: absolute;
+	top: 2.4%;
+	left: 52.5%;
+	width: 104px;
+	height: 34px;
+	font-weight: 800;
+}
+.btn_red:hover {
+	background-color: red;
+	border: none;
 }

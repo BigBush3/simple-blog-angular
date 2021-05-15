@@ -1,11 +1,15 @@
+<button (click)="showDialog()" class='add_btn'>+</button>
 <div class="container">
-	<div *ngFor="let post of posts; let i = index" class='card'>
+	<div *ngFor="let post of posts; let i = index" class="card">
 		<div class="inner">
 			<h2>
 				{{post.title}}
 			</h2>
+			<hr>
 			<p>{{ post.text}}</p>
-			<a [routerLink]="['view', post.id]">перейти</a>
+			<hr>
+			<a [routerLink]="['view', post.id]">перейти к записи</a>
 		</div>
 	</div>
+
 </div>

@@ -28,13 +28,20 @@ export class AddCardComponent implements OnInit {
 		this.el.nativeElement.classList.add('hhidden')
 	}
 	addPost() {
-		if (this.text === '' || this.title === '') {
-			return
+		if (this.text === '' && this.title === '') {
+			alert('Вы не заполнили ни одного поля')
 		}
-		this.shared.setMessage({ id: this.shared.getMessage().length, title: this.title, text: this.text });
-		this.close()
-		this.text = ''
-		this.title = ''
+		else if (this.text === '') {
+			alert('Вы не заполнили поле записи')
+		}
+		else if (this.title === '') {
+			alert('Вы не заполнили заголовок записи')
+		} else {
+			this.shared.setMessage({ id: this.shared.getMessage().length, title: this.title, text: this.text });
+			this.close()
+			this.text = ''
+			this.title = ''
+		}
 	}
 
 }

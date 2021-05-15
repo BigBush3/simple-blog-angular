@@ -14,5 +14,15 @@ export class CardComponent implements OnInit {
 	ngOnInit(): void {
 		this.posts = this.shared.getMessage()
 	}
+	showDialog() {
+		let modal = document.getElementById('modal_1')!
+		modal.classList.remove('hhidden')
+		modal.classList.add('sshow');
+	}
+	closeDialog() {
+		let modal = document.getElementById('modal_1')!
+		modal.classList.remove('sshow')
+		modal.classList.add('hhidden');
+	}
 
 }

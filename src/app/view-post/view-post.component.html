@@ -1,13 +1,21 @@
-<form class="container add">
-	<!-- return to initial page -->
+<!-- <form class="container add">
 	<p><a [routerLink]="['']">Назад</a></p>
-	<!-- title -->
 	<p><b><label for="name">Название статьи:</label></b></p>
 	<p><input type="text" id="name" name="name" [value]='this.post[this.id].title' disabled>
 	</p>
-	<!-- text -->
 	<p><b>Cтатья:</b></p>
 	<p><textarea rows="10" cols="45" name="text" [value]='this.post[this.id].text' disabled></textarea></p>
-	<!-- delete post -->
 	<p><button class="btn" (click)='deletePost()'>удалить</button></p>
-</form>
+</form> -->
+
+<div class="container">
+
+	<div class="center">
+		<a href="" class='btn btn_back'>Назад</a>
+		<button (click)='deletePost()' class="btn btn_red">Удалить</button>
+		<h1>{{this.post[this.id].title}}</h1>
+		<br>
+		<h2>{{this.post[this.id].text}}</h2>
+	</div>
+
+</div>
