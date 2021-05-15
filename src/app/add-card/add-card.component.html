@@ -1,0 +1,14 @@
+<div class="mmodal item-modal">
+	<div class="mmodal-body">
+		<form class="container add">
+			<p><b><label for="name">Название статьи:</label></b></p>
+			<p><input type="text" id="name" name="name" [(ngModel)]="title" [ngModelOptions]="{ standalone: true }" required>
+			</p>
+			<p><b>Cтатья:</b></p>
+			<p><textarea rows="10" cols="45" [(ngModel)]="text" name="text" [ngModelOptions]="{ standalone: true }"
+					required></textarea></p>
+			<p><button class="btn" (click)="addPost()">Создать</button></p>
+		</form>
+	</div>
+</div>
+<div class="mmodal-background"></div>

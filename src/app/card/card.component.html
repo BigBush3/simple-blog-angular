@@ -1,0 +1,11 @@
+<div class="container">
+	<div *ngFor="let post of posts; let i = index" class='card'>
+		<div class="inner">
+			<h2>
+				{{post.title}}
+			</h2>
+			<p>{{ post.text}}</p>
+			<a [routerLink]="['view', post.id]">перейти</a>
+		</div>
+	</div>
+</div>
