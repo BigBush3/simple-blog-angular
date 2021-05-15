@@ -11,8 +11,11 @@
 <div class="container">
 
 	<div class="center">
-		<a href="" class='btn btn_back'>Назад</a>
-		<button (click)='deletePost()' class="btn btn_red">Удалить</button>
+		<div class="btns">
+			<a href="" class='btn btn_back'>Назад</a>
+			<button (click)='deletePost()' class="btn btn_red">Удалить</button>
+		</div>
+
 		<h1>{{this.post[this.id].title}}</h1>
 		<br>
 		<h2>{{this.post[this.id].text}}</h2>

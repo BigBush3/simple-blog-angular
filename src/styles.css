@@ -131,15 +131,7 @@ input[type="text"] {
 	align-items: center;
 	text-align: center;
 }
-.btn_back {
-	position: absolute;
-	top: 2.4%;
-	left: 40%;
-}
 .btn_red {
-	position: absolute;
-	top: 2.4%;
-	left: 52.5%;
 	width: 104px;
 	height: 34px;
 	font-weight: 800;
@@ -147,4 +139,8 @@ input[type="text"] {
 .btn_red:hover {
 	background-color: red;
 	border: none;
+}
+
+.btns {
+	display: flex;
 }
